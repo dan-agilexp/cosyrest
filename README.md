@@ -2,7 +2,7 @@
 
 CosyRest is a NuGet package which provides a wrapper around the non-advertised REST API for the Geo Cosy Smart Thermostat.
 
-Geo Cosy do not advertise a public API for interacting with their smart thermostats. However by inspecting the API calls made by the Geo Cosy Web App [https://cosy.geotogether.com/] it is easy to replicate the calls using cURL to obtain a token and then perform operations on the smart thermostat.
+Geo Cosy do not advertise a public API for interacting with their smart thermostats. However by inspecting the API calls made by the [Geo Cosy Web App](https://cosy.geotogether.com/) it is easy to replicate the calls using cURL to obtain a token and then perform operations on the smart thermostat.
 
 This NuGet package wraps up those API calls to provide a simple Geo Cosy client.
 
@@ -12,7 +12,7 @@ Warning: As the Geo Cosy API is not advertised publicly, it is subject to change
 
 I wanted to control my heating with automation for example to "make it cosy" one hour before a scheduled AirBnB check-in.
 Although GeoCosy has an Alexa skill there is nothing similar for IFTTT or a public API so I set about building my own.
-The inspiration came from this GitHub repo https://github.com/Saggerus/HA-cosy-server but I didn't much like the idea of using a headless browser to simulate clicking around the web interface and plus I wanted a do it using .NET.
+The inspiration came from [this GitHub Repo](https://github.com/Saggerus/HA-cosy-server) but using a headless browser to simulate clicking around the web interface wasn't quite what I was after and plus I wanted a do it using .NET.
 However the project above might better suit your needs to worth checking out.
 
 # Installation
@@ -71,3 +71,7 @@ or
 # Contributions
 
 Feel free to submit a pull request to `master` and once merged, I will update the NuGet package. If I get a few merge requests I'll set up some CI to do this.
+
+# Possible extensions
+
+- Pub/Sub: Subscribe to ping messages from the Geo Cosy API and create an event handler mechanism to respond to changes of status.
