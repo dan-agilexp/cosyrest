@@ -28,8 +28,6 @@ To install this package into your .NET 5 application, use the following command:
 1. Install `AgileXp.CosyRest` NuGet Package
 2. Add the following lines to your Startup method in configure services
 
-3. Inject IGeoCosyClient.
-
 ```
         public void ConfigureServices(IServiceCollection services)
         {
@@ -38,6 +36,31 @@ To install this package into your .NET 5 application, use the following command:
             services.AddHttpClient();
             ...
         }
+```
+
+3. Inject IGeoCosyClient.
+
+```
+    public class HomeController : Controller
+    {
+        ...
+
+        private readonly IGeoCosyClient cosyClient;
+
+        public HomeController(IGeoCosyClient cosyClient)
+        {
+            this.cosyClient = cosyClient;
+
+        }
+
+        public async Task SomeMethod()
+        {
+            var token = this.cosyClient.LoginAsync("your-cosy web/app username", "your-cosy web/app password");
+        }
+
+        ...
+
+    }
 ```
 
 # Usage
