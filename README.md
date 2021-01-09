@@ -2,7 +2,7 @@
 
 CosyRest is a NuGet package which provides a wrapper around the non-advertised REST API for the Geo Cosy Smart Thermostat.
 
-Geo Cosy do not advertise a public API for interacting with their smart thermostats. However by inspecting the API calls made by the [Geo Cosy Web App](https://cosy.geotogether.com/) it is easy to replicate the calls using cURL to obtain a token and then perform operations on the smart thermostat.
+Geo do not advertise a public API for interacting with their smart thermostats. However by inspecting the API calls made by the [Geo Cosy Web App](https://cosy.geotogether.com/) it is easy to replicate the calls using cURL to obtain a token and then perform operations on the smart thermostat.
 
 This NuGet package wraps up those API calls to provide a simple Geo Cosy client.
 
