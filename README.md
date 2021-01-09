@@ -8,7 +8,7 @@ This NuGet package wraps up those API calls to provide a simple Geo Cosy client.
 
 Warning: As the Geo Cosy API is not advertised publicly, it is subject to change at any time by them without any prior notification. Therefore if you want to control the Geo Cosy thermostats for any critial or commercial application I suggest you get in touch with them directly. 
 
-However, presuming their hardware (the Geo Cosy smart thermostat and its companion Cosy hub) uses these same API calls, I would say its unlikely to change much while the product is supported as to my knowledge they relase OTA firmware updates to the devices to allow them to accomodate API changes..
+However, presuming their hardware (the Geo Cosy smart thermostat and its companion Cosy hub) uses these same API calls, I would say its unlikely to change much while the product is supported as to my knowledge they don't release OTA firmware updates to the devices which would allow them to accomodate API changes..
 
 # Motivation
 
