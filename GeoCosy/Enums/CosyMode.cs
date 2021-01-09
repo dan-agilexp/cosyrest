@@ -1,5 +1,5 @@
 ﻿// // <copyright file="CosyMode.cs" company="Dan Cook">
-// // Copyright (c) Daniel Cook. All rights reserved.
+// // Copyright (c) Daniel Cook. All rights reserved
 // // </copyright>
 namespace GeoCosy.Enums
 {
