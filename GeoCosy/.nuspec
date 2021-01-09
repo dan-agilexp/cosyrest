@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package  xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>    
+    <id>AgileXp.CosyRest</id>
+    <version>1.0.0</version>
+    <title>CosyRest Geo Cosy API Client</title>
+    <title>CosyRest - Geo Cosy Smart Thermostat REST Client</title>
+    <authors>Dan Cook</authors>
+    <owners>Dan Cook</owners>
+    <license type="MIT" />
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>CosyRest is a wrapper around the non-advertised REST API for the Geo Cosy Smart Thermostat.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2020 Daniel Cook</copyright>
+    <tags>geo cosy smart thermostat</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.7"  />
+      <dependency id="Microsoft.Extensions.Http" version="5.0.0"  />
+      <dependency id="Newtonsoft.Json" version="12.0.3"  />
+    </dependencies>
+    <summary>CosyRest is a wrapper around the non-advertised REST API for the Geo Cosy Smart Thermostat.</summary>
+  </metadata>
+  <files>
+    <file src="readme.md" target="" />
+  </files>
+</package>
