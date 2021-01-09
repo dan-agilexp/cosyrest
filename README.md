@@ -6,14 +6,17 @@ Geo Cosy do not advertise a public API for interacting with their smart thermost
 
 This NuGet package wraps up those API calls to provide a simple Geo Cosy client.
 
-Warning: As the Geo Cosy API is not advertised publicly, it is subject to change at any time by them without any prior notification. Therefore if you want to control the Geo Cosy thermostats for any critial or commercial application I suggest you get in touch with them directly. However, presuming their hardware (the Geo Cosy smart thermostat and Cosy hub uses these same API calls, I would say its unlikely to change much while the product is supported.
+Warning: As the Geo Cosy API is not advertised publicly, it is subject to change at any time by them without any prior notification. Therefore if you want to control the Geo Cosy thermostats for any critial or commercial application I suggest you get in touch with them directly. 
+
+However, presuming their hardware (the Geo Cosy smart thermostat its companion Cosy hub) uses these same API calls, I would say its unlikely to change much while the product is supported as to my knowledge they relase OTA firmware updates to the devices to allow them to accomodate API changes..
 
 # Motivation
 
 I wanted to control my heating with automation for example to "make it cosy" one hour before a scheduled AirBnB check-in.
 Although GeoCosy has an Alexa skill there is nothing similar for IFTTT or a public API so I set about building my own.
 The inspiration came from [this GitHub Repo](https://github.com/Saggerus/HA-cosy-server) but using a headless browser to simulate clicking around the web interface wasn't quite what I was after and plus I wanted a do it using .NET.
-However the project above might better suit your needs to worth checking out.
+
+However the project above might better suit your needs, so worth checking out.
 
 # Installation
 
@@ -77,9 +80,14 @@ var token = await cosyClient.LoginAsync("<your geo cosy web/app email address>",
 var devices = await cosyClient.GetSystems(token.Data.Token, true);
 ```
 
-## Set a device to Cosy for two hours
+## Set a device to "Comfy" for two hours
 ```
- await cosyClient.SetMode(token.Data.Token, devices.Data.SystemDetails[0].SystemId, CosyMode.Cosy, 120);
+ await cosyClient.SetMode(token.Data.Token, devices.Data.SystemDetails[0].SystemId, CosyMode.Comfy, 120);
+```
+
+## Set a device to "Cosy" for an hour.
+```
+ await cosyClient.SetMode(token.Data.Token, devices.Data.SystemDetails[0].SystemId, CosyMode.Cosy, 60);
 ```
 
 ## Set a device to Hibernate
@@ -98,3 +106,4 @@ Feel free to submit a pull request to `master` and once merged, I will update th
 # Possible extensions
 
 - Pub/Sub: Subscribe to ping messages from the Geo Cosy API and create an event handler mechanism to respond to changes of status.
+- There are loads more API methods such as to set schedule which I haven't implemented but I can implement more on request or better still, please raise a pull request.
