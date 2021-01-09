@@ -56,7 +56,7 @@ var devices = await cosyClient.GetSystems(token.Data.Token, true);
 
 ## Set a device to Cosy for two hours
 ```
- await cosyClient.SetMode(token.Data.Token, devices.Data.SystemDetails[0].SystemId, CosyMode.Cosy);
+ await cosyClient.SetMode(token.Data.Token, devices.Data.SystemDetails[0].SystemId, CosyMode.Cosy, 120);
 ```
 
 ## Set a device to Hibernate
